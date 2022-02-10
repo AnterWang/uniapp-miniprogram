@@ -3,7 +3,6 @@
 		<view v-if="supportedWxSdk" class="content animated fadeInUp">
 			<image
 				class="logo"
-				src="https://hh-oss-html.miyapay.com/hhops/picture/15770813092372b16d3e25eb7"
 			/>
 			<view class="title">欢迎登录</view>
 		</view>
@@ -37,8 +36,8 @@ export default {
 			return util.versionCompare(this.system.SDKVersion, Config.supportWxSDKVersion)
 		}
 	},
-	onLoad() {
-		
+	onLoad(options) {
+		console.log('onload',options)
 	},
 	methods: {
 
@@ -56,6 +55,7 @@ export default {
 			height: 208rpx;
 			width: 208rpx;
 			margin-top: 138rpx;
+			background: pink;
 		}
 
 		.title {
